@@ -4,3 +4,6 @@ pyaudio
 playsound
 pythonping
 datetime
+pythonping
+gtts
+scapy
