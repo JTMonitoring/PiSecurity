@@ -29,8 +29,8 @@ not_understood = "Sorry, I don't recognize that."
 
 
 #keywords from transcript (triggers)
-start_task_triggers = ["firefox", "update", "upgrade", "shutdown", "reboot", "security", "devices", "time"]
-start_task_commands = ["firefox", "sudo apt update", "sudo apt upgrade -y", "shutdown", "reboot", "python3 ping2.py", "python3 netscan.py && python3 gen_email.py", "python3 time.py"]
+start_task_triggers = ["firefox", "update", "upgrade", "shutdown", "reboot", "security", "devices", "time", "internet"]
+start_task_commands = ["firefox", "sudo apt update", "sudo apt upgrade -y", "shutdown", "reboot", "python3 ping2.py", "python3 netscan.py && python3 gen_email.py", "python3 time.py", "python3 is_online.py"]
 
 
 def think(transcript):
