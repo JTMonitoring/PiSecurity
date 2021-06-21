@@ -14,8 +14,6 @@ from chores import *
 
 r = sr.Recognizer()
 
-#programmed responces
-
 
 def save_audio():
     with sr.Microphone() as source:
