@@ -6,6 +6,9 @@ from pydub.silence import split_on_silence
 from pydub import AudioSegment
 from pydub.playback import play
 import time
+import urllib.request
+
+from pythonping import ping
 
 #text to speech
 from gtts import gTTS
@@ -13,6 +16,23 @@ from gtts import gTTS
 from chores import *
 
 r = sr.Recognizer()
+
+def getlang():
+    languagef = open("src/language.txt", "r")
+    language = languagef.read()
+    return language
+
+lang = getlang()
+
+def connect(host='http://google.com'):
+    try:
+        urllib.request.urlopen(host) #Python 3.x
+        return True
+    except:
+        mytts("no Internet", "en")
+
+        
+
 
 
 def save_audio():
@@ -28,7 +48,7 @@ while True:
     try:    
         # transcript = save_audio()
         # print("[INPUT RECIEVED]:", transcript)
-        
+        connect()
         trigger = "assistant"
         sudo_trigger = "sudo penis"
         chore = save_audio()
