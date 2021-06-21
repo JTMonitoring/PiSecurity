@@ -2,3 +2,5 @@ SpeechRecognition
 pydub
 pyaudio
 playsound
+pythonping
+datetime
