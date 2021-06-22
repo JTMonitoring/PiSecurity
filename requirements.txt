@@ -7,3 +7,4 @@ datetime
 pythonping
 gtts
 scapy
+requests
