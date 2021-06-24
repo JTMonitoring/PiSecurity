@@ -26,11 +26,11 @@ def mytts(mytext, language):
 not_understood = "Sorry, I don't recognize that."
 
 #misc
-
+shut_up = "shut up hoe"
 
 #keywords from transcript (triggers)
-start_task_triggers = ["firefox", "update", "upgrade", "shutdown", "reboot", "security", "devices", "time", "internet"]
-start_task_commands = ["firefox", "sudo apt update", "sudo apt upgrade -y", "shutdown", "reboot", "python3 ping2.py", "python3 netscan.py && python3 gen_email.py", "python3 time.py", "python3 is_online.py"]
+start_task_triggers = ["firefox", "update", "upgrade", "shutdown", "reboot", "security", "devices", "time", "internet", "weather", "remind"]
+start_task_commands = ["firefox", "sudo apt update", "sudo apt upgrade -y", "shutdown", "reboot", "python3 ping2.py", "python3 netscan.py && python3 gen_email.py", "python3 time.py", "python3 is_online.py", "python3 scrapeweather.py", "python3 get_reminder.py && python3 timer.py"]
 
 
 def think(transcript):
@@ -53,11 +53,17 @@ def think(transcript):
                 if word in start_task_triggers:
                     index = start_task_triggers.index(word)
                     print(start_task_commands[index])
+                    # if start_task_triggers[index] == "remind":
+                    #     f = open("time.txt", "w")
+                    #     f.write(str(words)
+                    #     f.close()
+
                     os.system(start_task_commands[index])
                     break
                 elif word not in start_task_triggers:
                     continue
                 
+                    
                 else:
                     not_in += 1
                     # continue
