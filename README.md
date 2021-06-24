@@ -15,6 +15,9 @@ python3 -m pip install -r requirements.txt
 
 Usage
 ```
-#Usage
+sudo chmod +x start
+sudo ./start
+#or
+sudo python3 assistant.py
 ```
 
