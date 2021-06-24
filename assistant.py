@@ -17,12 +17,7 @@ from chores import *
 
 r = sr.Recognizer()
 
-def getlang():
-    languagef = open("src/language.txt", "r")
-    language = languagef.read()
-    return language
 
-lang = getlang()
 
 def connect(host='http://google.com'):
     try:
@@ -50,12 +45,14 @@ while True:
         # print("[INPUT RECIEVED]:", transcript)
         connect()
         trigger = "assistant"
+        
         sudo_trigger = "sudo penis"
         chore = save_audio()
         if trigger in chore:
             # voice = AudioSegment.from_mp3('src/library/greeting.mp3')
             # play(voice)
             mytts("How can I help?", "en")
+            os.system("mpg123 src/library/start.wav")
             # chore.executechore(chore)
             # insult(chore)
             try:
