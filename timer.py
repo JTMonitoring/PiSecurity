@@ -26,7 +26,7 @@ def second_timer(seconds, reminder_name):
             mytts("Time to "+str(reminder_name), "en")
             break
 
-# data = "remind me to eat shit in 3 seconds"
+
 f = open("time.txt", "r")
 data = f.read()
 f.close()
